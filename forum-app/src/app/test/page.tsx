@@ -15,7 +15,7 @@ export default function Component() {
             <aside className="w-64 p-4 bg-gray-800">
                 <div className="flex items-center mb-8">
                     <RssIcon className="w-8 h-8 mr-2" />
-                    <span className="text-xl font-bold">reddit</span>
+                    <span className="text-xl font-bold">ChubuForum</span>
                 </div>
                 <nav className="space-y-2">
                     <Link href="#" className="flex items-center p-2 space-x-2 rounded-md bg-gray-700" prefetch={false}>
