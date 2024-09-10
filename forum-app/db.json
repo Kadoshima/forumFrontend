@@ -1,0 +1,128 @@
+{
+  "topics": [
+    {
+      "id": "1",
+      "title": "AIの未来",
+      "description": "人工知能が社会に与える潜在的な影響について議論",
+      "imageUrl": "/api/placeholder/300/150",
+      "subreddit": "r/テクノロジー"
+    },
+    {
+      "id": "2",
+      "title": "日本の宇宙開発最新情報",
+      "description": "JAXAの新しい宇宙探査計画に関する最新ニュース",
+      "imageUrl": "/api/placeholder/300/150",
+      "subreddit": "r/宇宙"
+    },
+    {
+      "id": "3",
+      "title": "ポケモン新作発表",
+      "description": "ポケモンシリーズの最新作が発表、新機能の詳細",
+      "imageUrl": "/api/placeholder/300/150",
+      "subreddit": "r/ゲーム"
+    },
+    {
+      "id": "4",
+      "title": "日本の気候変動対策",
+      "description": "政府が発表した新しい気候変動対策プランの概要",
+      "imageUrl": "/api/placeholder/300/150",
+      "subreddit": "r/環境"
+    },
+    {
+      "id": "5",
+      "title": "仮想通貨市場分析",
+      "description": "日本の仮想通貨市場の週間トレンド分析",
+      "imageUrl": "/api/placeholder/300/150",
+      "subreddit": "r/仮想通貨"
+    },
+    {
+      "id": "6",
+      "title": "新型コロナ最新情報",
+      "description": "日本における新型コロナウイルスの最新状況と対策",
+      "imageUrl": "/api/placeholder/300/150",
+      "subreddit": "r/コロナウイルス"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "あなたの「これが一番うまい！」という意外な食べ物の組み合わせは？",
+      "subreddit": "r/質問ある",
+      "timeAgo": "3時間前",
+      "likes": 15200,
+      "comments": 6800
+    },
+    {
+      "id": "2",
+      "title": "トヨタが新型電気自動車を発表",
+      "subreddit": "r/テクノロジー",
+      "timeAgo": "5時間前",
+      "likes": 10500,
+      "comments": 3200
+    },
+    {
+      "id": "3",
+      "title": "日本の研究チームが画期的な新素材を開発",
+      "subreddit": "r/科学",
+      "timeAgo": "8時間前",
+      "likes": 9800,
+      "comments": 1500
+    },
+    {
+      "id": "4",
+      "title": "速報：東京で大規模地震発生",
+      "subreddit": "r/ニュース",
+      "timeAgo": "1時間前",
+      "likes": 20100,
+      "comments": 8900
+    },
+    {
+      "id": "5",
+      "title": "新研究：和食の健康効果が科学的に証明される",
+      "subreddit": "r/健康",
+      "timeAgo": "6時間前",
+      "likes": 7600,
+      "comments": 2100
+    },
+    {
+      "id": "6",
+      "title": "明日、野口聡一宇宙飛行士とのAMAセッション開催",
+      "subreddit": "r/なんでも聞いて",
+      "timeAgo": "2時間前",
+      "likes": 18900,
+      "comments": 5400
+    }
+  ],
+  "popularCommunities": [
+    {
+      "name": "r/日本",
+      "members": 3812400,
+      "href": "/r/日本"
+    },
+    {
+      "name": "r/面白い",
+      "members": 4329500,
+      "href": "/r/面白い"
+    },
+    {
+      "name": "r/ゲーム",
+      "members": 3391500,
+      "href": "/r/ゲーム"
+    },
+    {
+      "name": "r/かわいい",
+      "members": 3164800,
+      "href": "/r/かわいい"
+    },
+    {
+      "name": "r/TIL_JPN",
+      "members": 2938500,
+      "href": "/r/TIL_JPN"
+    },
+    {
+      "name": "r/科学",
+      "members": 2874300,
+      "href": "/r/科学"
+    }
+  ]
+}
