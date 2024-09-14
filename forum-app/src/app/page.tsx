@@ -51,7 +51,7 @@ const ForumApp: React.FC = () => {
 
   return (
       <div className="flex min-h-screen bg-gray-900 text-white">
-        <Sidebar />
+        <Sidebar/>
         <main className="flex-1 p-4">
           <header className="flex items-center justify-between mb-8">
             {/* Header content here */}
@@ -59,17 +59,17 @@ const ForumApp: React.FC = () => {
 
           <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
             {topics.map(topic => (
-                <TopicCard key={topic.id} topic={topic} />
+                <TopicCard key={topic.id} topic={topic}/>
             ))}
           </section>
 
           <section className="mt-8">
             {posts.map(post => (
-                <ForumCard key={post.id} post={post} />
+                <ForumCard key={post.id} post={post}/>
             ))}
           </section>
         </main>
-        <PopularCommunities communities={communities} />
+        <PopularCommunities communities={communities}/>
       </div>
   )
 }

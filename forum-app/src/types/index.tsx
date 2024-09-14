@@ -70,6 +70,7 @@ export interface User {
     nickname: string;
     email: string;
     departmentId: number;
+    avatarUrl: string;
     courseId: number;
     createdAt: string;
     updatedAt: string;

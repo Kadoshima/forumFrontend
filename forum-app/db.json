@@ -2,7 +2,7 @@
   "topics": [
     {
       "id": "1",
-      "title": "AIの未来",
+      "title": "けいたの生態",
       "description": "人工知能が社会に与える潜在的な影響について議論",
       "imageUrl": "/api/placeholder/300/150",
       "subreddit": "r/テクノロジー"
@@ -123,6 +123,99 @@
       "name": "r/科学",
       "members": 2874300,
       "href": "/r/科学"
+    }
+  ],
+  "user": {
+    "id": 1,
+    "studentId": "12345678",
+    "nickname": "山田 太郎",
+    "email": "taro.yamada@example.com",
+    "departmentId": 2,
+    "avatarUrl": "/api/placeholder/100/100",
+    "courseId": 101,
+    "createdAt": "2023-01-15T08:30:00Z",
+    "updatedAt": "2024-09-12T15:45:00Z"
+  },
+  "userForums": [
+    {
+      "id": 1,
+      "title": "JavaScriptの基本について質問です",
+      "subreddit": "r/プログラミング初心者の集い",
+      "timeAgo": "2時間前",
+      "likes": 42,
+      "comments": 15,
+      "author": "山田 太郎",
+      "imageUrl": "/api/placeholder/200/300"
+    },
+    {
+      "id": 2,
+      "title": "Next.js 13の新機能について議論しましょう",
+      "subreddit": "r/Next.js勉強会",
+      "timeAgo": "1日前",
+      "likes": 78,
+      "comments": 32,
+      "author": "山田 太郎",
+      "imageUrl": "/api/placeholder/200/300"
+    },
+    {
+      "id": 3,
+      "title": "オンライン授業の効果的な受け方のコツを教えてください",
+      "subreddit": "r/大学生活相談室",
+      "timeAgo": "3日前",
+      "likes": 105,
+      "comments": 56,
+      "author": "山田 太郎",
+      "imageUrl": "/api/placeholder/200/300"
+    }
+  ],
+  "userForums": [
+    {
+      "id": 1,
+      "forumId": 101,
+      "userId": 1,
+      "content": "JavaScriptの基本について質問です",
+      "tags": "プログラミング, JavaScript",
+      "status": 1,
+      "parentId": null,
+      "attachments": ["link-to-attachment1.pdf", "link-to-attachment2.jpg"],
+      "createdAt": "2023-01-15T08:30:00Z",
+      "updatedAt": "2024-09-12T15:45:00Z"
+    },
+    {
+      "id": 2,
+      "forumId": 102,
+      "userId": 1,
+      "content": "Next.js 13の新機能について議論しましょう",
+      "tags": "Next.js, Web開発",
+      "status": 1,
+      "parentId": null,
+      "attachments": ["link-to-attachment3.pdf"],
+      "createdAt": "2023-02-20T09:15:00Z",
+      "updatedAt": "2024-09-10T12:30:00Z"
+    },
+    {
+      "id": 3,
+      "forumId": 103,
+      "userId": 1,
+      "content": "オンライン授業の効果的な受け方のコツを教えてください",
+      "tags": "教育, オンライン",
+      "status": 1,
+      "parentId": null,
+      "attachments": [],
+      "createdAt": "2023-03-05T14:00:00Z",
+      "updatedAt": "2024-09-08T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "forumId": 104,
+      "userId": 1,
+      "content": "新しいプログラミング言語の学習方法について",
+      "tags": "プログラミング, 学習",
+      "status": 1,
+      "parentId": null,
+      "attachments": ["link-to-attachment4.png"],
+      "createdAt": "2023-04-10T11:20:00Z",
+      "updatedAt": "2024-09-07T13:15:00Z"
     }
   ]
 }
