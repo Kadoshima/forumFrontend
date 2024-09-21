@@ -3,17 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExpandIcon, FlipVerticalIcon } from "@/components/ui/Icon/icon";
 import PostCard from "./PostCard";
-
-interface Post {
-  imageUrl: string;
-  title: string;
-  description: string;
-  subChubuForum: string;
-  timeAgo?: string;
-  upvotes?: string;
-  comments?: string;
-  image?: string;
-}
+import Post from "@/types/PostTypes";
 
 interface PostListProps {
   posts: Post[];

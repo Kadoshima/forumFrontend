@@ -2,17 +2,7 @@ import React from "react";
 import Layout from "@/components/Layout";
 import TrendingPosts from "@/components/post/TrendingPosts";
 import PostList from "@/components/post/PostList";
-
-interface Post {
-  imageUrl: string;
-  title: string;
-  description: string;
-  subChubuForum: string;
-  timeAgo?: string;
-  upvotes?: string;
-  comments?: string;
-  image?: string;
-}
+import Post from "@/types/PostTypes";
 
 export default function Home(): JSX.Element {
   const trendingPosts: Post[] = [
