@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "@/components/Layout";
+import Layout from "@/app/(main)/Layout";
 import TrendingPosts from "@/components/post/TrendingPosts";
 import PostList from "@/components/post/PostList";
 import Post from "@/types/PostTypes";

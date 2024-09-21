@@ -4,12 +4,12 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Input } from "@/components/common/input";
+import { Button } from "@/components/common/button";
+import { Card } from "@/components/common/card";
 import { SVGProps } from "react";
 
-export default function Component() {
+export default function Test() {
   return (
     <div className="flex min-h-screen bg-gray-900 text-white">
       <aside className="w-64 p-4 bg-gray-800">
