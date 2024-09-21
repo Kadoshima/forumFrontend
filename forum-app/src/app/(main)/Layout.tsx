@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 
 import Header from "@/components/Header/Header";
 import SideNavigation from "@/components/Header/SideNavigation";
-import PopularCommunities from "@/components/communities/PopularCommunities";
+import PopularCommunities from "@/components/community/PopularCommunities";
 interface LayoutProps {
   children: ReactNode;
 }
