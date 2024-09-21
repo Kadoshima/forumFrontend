@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components/common/card";
 import Post from "@/types/PostTypes";
 
 interface TrendingPostsProps {

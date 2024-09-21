@@ -1,7 +1,7 @@
 import React from "react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ThumbsUpIcon, ReplyIcon, ShareIcon } from "@/components/ui/Icon/icon";
+import { Card } from "@/components/common/card";
+import { Button } from "@/components/common/button";
+import { ThumbsUpIcon, ReplyIcon, ShareIcon } from "@/components/common/icon";
 import Post from "@/types/PostTypes";
 
 interface PostCardProps {
