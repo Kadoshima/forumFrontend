@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { GroupIcon, EllipsisIcon } from "@/components/ui/Icon/icon";
+import { GroupIcon, EllipsisIcon } from "@/components/common/icon";
 import { Community } from "@/types/CommunityTypes";
 
 export default function PopularCommunities(): JSX.Element {
