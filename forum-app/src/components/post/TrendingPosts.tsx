@@ -1,16 +1,6 @@
 import React from "react";
-import { Card } from "@/components/ui/card";
-
-interface Post {
-  imageUrl: string;
-  title: string;
-  description: string;
-  subChubuForum: string;
-  timeAgo?: string;
-  upvotes?: string;
-  comments?: string;
-  image?: string;
-}
+import { Card } from "@/components/common/card";
+import Post from "@/types/PostTypes";
 
 interface TrendingPostsProps {
   posts: Post[];

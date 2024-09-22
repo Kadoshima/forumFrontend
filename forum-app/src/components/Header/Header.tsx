@@ -1,7 +1,7 @@
 import React from "react";
-import { SearchIcon, FlipVerticalIcon } from "@/components/ui/Icon/icon";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { SearchIcon, FlipVerticalIcon } from "@/components/common/icon";
+import { Input } from "@/components/common/input";
+import { Button } from "@/components/common/button";
 
 export default function Header(): JSX.Element {
   return (

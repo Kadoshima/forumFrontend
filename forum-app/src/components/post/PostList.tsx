@@ -1,19 +1,9 @@
 import React from "react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ExpandIcon, FlipVerticalIcon } from "@/components/ui/Icon/icon";
+import { Card } from "@/components/common/card";
+import { Button } from "@/components/common/button";
+import { ExpandIcon, FlipVerticalIcon } from "@/components/common/icon";
 import PostCard from "./PostCard";
-
-interface Post {
-  imageUrl: string;
-  title: string;
-  description: string;
-  subChubuForum: string;
-  timeAgo?: string;
-  upvotes?: string;
-  comments?: string;
-  image?: string;
-}
+import Post from "@/types/PostTypes";
 
 interface PostListProps {
   posts: Post[];

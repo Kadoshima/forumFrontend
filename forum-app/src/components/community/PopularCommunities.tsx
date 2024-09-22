@@ -1,11 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { GroupIcon, EllipsisIcon } from "@/components/ui/Icon/icon";
-
-export interface Community {
-  name: string;
-  members: string;
-}
+import { GroupIcon, EllipsisIcon } from "@/components/common/icon";
+import { Community } from "@/types/CommunityTypes";
 
 export default function PopularCommunities(): JSX.Element {
   const communities: Community[] = [

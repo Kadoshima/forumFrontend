@@ -13,7 +13,7 @@ import {
   TrendingUpIcon,
   TvIcon,
   VideoIcon,
-} from "../ui/Icon/icon";
+} from "../common/icon";
 import { BookIcon, BuildingIcon, NewspaperIcon, UsersIcon } from "lucide-react";
 
 export default function SideNavigation() {
