@@ -30,8 +30,8 @@ export default function SignupForm() {
   const [nickname, setNickname] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [departmentId, setDepartmentId] = useState<number>(0);
-  const [courseId, setCourseId] = useState<number>(0);
+  const [departmentId, setDepartmentId] = useState<string>("");
+  const [courseId, setCourseId] = useState<string>("");
   const [error, setError] = useState<string>("");
   const router = useRouter();
 
@@ -61,14 +61,15 @@ export default function SignupForm() {
           Nickname: nickname,
           Email: email,
           Password: password,
-          DepartmentID: departmentId,
-          CourseID: courseId,
+          DepartmentID: +departmentId,
+          CourseID: +courseId,
         }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
+        sessionStorage.setItem("student_id", studentId);
         router.push("/login");
       } else {
         setError(data.error || "サインアップに失敗しました。");
@@ -170,7 +171,7 @@ export default function SignupForm() {
             label="学科"
             name="department"
             value={departmentId}
-            onChange={(e) => setDepartmentId(Number(e.target.value))}
+            onChange={(e) => setDepartmentId(e.target.value)}
             error={!!error}>
             {departments.map((dept) => (
               <MenuItem key={dept.id} value={dept.id}>
@@ -187,7 +188,7 @@ export default function SignupForm() {
             label="コース"
             name="course"
             value={courseId}
-            onChange={(e) => setCourseId(Number(e.target.value))}
+            onChange={(e) => setCourseId(e.target.value)}
             error={!!error}>
             {courses.map((course) => (
               <MenuItem key={course.id} value={course.id}>

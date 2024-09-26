@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, FormEvent } from "react";
+import React, { useState, FormEvent, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
   Avatar,
@@ -20,11 +20,18 @@ export default function LoginForm() {
   const [error, setError] = useState<string>("");
   const router = useRouter();
 
+  useEffect(() => {
+    const tempStudentId = sessionStorage.getItem("student_id");
+    if (tempStudentId) {
+      setStudentId(tempStudentId);
+      sessionStorage.removeItem("student_id");
+    }
+  }, []);
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
 
-    // クライアントサイドでのバリデーション
     if (!studentId.trim() || !password.trim()) {
       setError("学籍番号とパスワードを入力してください。");
       return;
