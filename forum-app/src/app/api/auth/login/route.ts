@@ -6,7 +6,7 @@ interface LoginResponse {
 
 export async function POST(request: NextRequest) {
   try {
-    const { userID, password } = await request.json();
+    const { student_id, password } = await request.json();
     const baseURL = process.env.NEXT_PUBLIC_ENDPOINT;
 
     if (!baseURL) {
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userID, password }),
+      body: JSON.stringify({ student_id, password }),
     });
 
     const data: LoginResponse = await response.json();
