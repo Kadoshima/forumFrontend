@@ -123,7 +123,7 @@ export default function LoginForm() {
             ログイン
           </Button>
           <Box textAlign="center">
-            <Link href="#" variant="body2">
+            <Link href="/signup" variant="body2">
               アカウントを作成
             </Link>
           </Box>
