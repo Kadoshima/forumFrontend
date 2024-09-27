@@ -6,13 +6,14 @@ import ForumType from "@/types/ForumTypes";
 
 interface ForumProps {
   post: ForumType;
+  onClick: () => void;
 }
 
-export default function Forum({ post }: ForumProps): JSX.Element {
+export default function Forum({ post, onClick }: ForumProps): JSX.Element {
   const timeAgo = new Date(post.CreatedAt).toLocaleDateString();
 
   return (
-    <Card className="p-4 bg-gray-800">
+    <Card className="p-4 bg-gray-800" onClick={onClick}>
       <div className="flex items-start space-x-4">
         {post.Attachments && (
           <div className="flex-shrink-0">
