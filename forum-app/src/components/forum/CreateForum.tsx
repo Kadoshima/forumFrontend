@@ -4,23 +4,20 @@ import React, { useState } from "react";
 import {
   TextField,
   Button,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
   Paper,
   Typography,
   Box,
   SelectChangeEvent,
 } from "@mui/material";
 import { useRouter } from "next/navigation";
+import FileUpload from "@/components/post/FileUpload";
 
 interface ForumData {
   Title: string;
   Description: string;
   Visibility: number;
   Category: string;
-  Attachment: string | null;
+  Attachment: File | null;
   Moderators: number | null;
 }
 
@@ -30,7 +27,7 @@ const CreateForumForm: React.FC = () => {
     Description: "",
     Visibility: 0,
     Category: "",
-    Attachment: null,
+    Attachment: null as File | null,
     Moderators: null,
   });
   const [error, setError] = useState<string | null>(null);
@@ -47,12 +44,8 @@ const CreateForumForm: React.FC = () => {
     }));
   };
 
-  const handleSelectChange = (e: SelectChangeEvent<number>) => {
-    const { name, value } = e.target;
-    setForumData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const handleFileChange = (file: File | null) => {
+    setForumData((prev) => ({ ...prev, Attachment: file }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -84,14 +77,14 @@ const CreateForumForm: React.FC = () => {
   };
 
   return (
-    <Paper elevation={3} sx={{ p: 4, maxWidth: 500, mx: "auto", mt: 4 }}>
+    <Paper elevation={3} sx={{ p: 4, maxWidth: 500, mx: "auto", mt: 8 }}>
       <Typography variant="h5" component="h2" gutterBottom>
         Create New Forum
       </Typography>
       <form onSubmit={handleSubmit}>
         <TextField
           fullWidth
-          label="Title"
+          label="タイトル"
           name="Title"
           value={forumData.Title}
           onChange={handleChange}
@@ -100,7 +93,7 @@ const CreateForumForm: React.FC = () => {
         />
         <TextField
           fullWidth
-          label="Description"
+          label="説明"
           name="Description"
           value={forumData.Description}
           onChange={handleChange}
@@ -109,44 +102,24 @@ const CreateForumForm: React.FC = () => {
           rows={4}
           required
         />
-        <FormControl fullWidth margin="normal">
-          <InputLabel>Visibility</InputLabel>
-          <Select
-            name="Visibility"
-            value={forumData.Visibility}
-            onChange={handleSelectChange}
-            required>
-            <MenuItem value={0}>Public</MenuItem>
-            <MenuItem value={1}>Private</MenuItem>
-          </Select>
-        </FormControl>
         <TextField
           fullWidth
-          label="Category"
+          label="分類"
           name="Category"
           value={forumData.Category}
           onChange={handleChange}
           margin="normal"
           required
         />
-        <TextField
+        {/* <TextField
           fullWidth
           label="Attachment URL"
           name="Attachment"
           value={forumData.Attachment}
           onChange={handleChange}
           margin="normal"
-        />
-        <TextField
-          fullWidth
-          label="Moderators"
-          name="Moderators"
-          type="number"
-          value={forumData.Moderators}
-          onChange={handleChange}
-          margin="normal"
-          InputProps={{ inputProps: { min: 0 } }}
-        />
+        /> */}
+        <FileUpload onFileChange={handleFileChange} />
         {error && (
           <Typography color="error" sx={{ mt: 2 }}>
             {error}
