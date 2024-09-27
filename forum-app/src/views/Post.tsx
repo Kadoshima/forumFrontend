@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { PostResponse } from "@/types/PostTypes";
-import Layout from "@/app/(main)/Layout";
 import PostList from "@/components/post/PostList";
 
 export default function Post() {
@@ -33,11 +32,9 @@ export default function Post() {
     fetchData();
   }, [id]);
   return (
-    <Layout>
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-2xl font-bold mb-4">Forum Posts</h1>
-        <PostList posts={data} />
-      </div>
-    </Layout>
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-2xl font-bold mb-4">Forum Posts</h1>
+      <PostList posts={data} />
+    </div>
   );
 }
