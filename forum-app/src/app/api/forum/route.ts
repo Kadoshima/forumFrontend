@@ -1,28 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-
-interface ForumRequest {
-  Title: string;
-  Description: string;
-  Visibility: number;
-  Category: string;
-  Attachment: string;
-  Moderators: number;
-}
-
-interface ForumResponse {
-  ID: number;
-  Title: string;
-  Description: string;
-  CreatedBy: number;
-  Status: number;
-  Visibility: number;
-  Category: string;
-  NumPosts: number;
-  Attachments: string;
-  Moderators: any | null;
-  CreatedAt: string;
-  UpdatedAt: string;
-}
+import { ForumRequest, ForumResponse } from "@/types/ForumTypes";
 
 export async function GET(request: NextRequest) {
   try {

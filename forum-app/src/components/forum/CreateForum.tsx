@@ -1,14 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  TextField,
-  Button,
-  Paper,
-  Typography,
-  Box,
-  SelectChangeEvent,
-} from "@mui/material";
+import { TextField, Button, Paper, Typography, Box } from "@mui/material";
 import { useRouter } from "next/navigation";
 import FileUpload from "@/components/imageUpload/FileUpload";
 

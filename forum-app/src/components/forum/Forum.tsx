@@ -2,10 +2,10 @@ import React from "react";
 import { Card } from "@/components/common/card";
 import { Button } from "@/components/common/button";
 import { ThumbsUpIcon, ReplyIcon, ShareIcon } from "@/components/common/icon";
-import ForumType from "@/types/ForumTypes";
+import { ForumResponse } from "@/types/ForumTypes";
 
 interface ForumProps {
-  post: ForumType;
+  post: ForumResponse;
   onClick: () => void;
 }
 

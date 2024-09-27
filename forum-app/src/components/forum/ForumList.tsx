@@ -4,11 +4,11 @@ import React from "react";
 import { Button } from "@/components/common/button";
 import { ExpandIcon, FlipVerticalIcon } from "@/components/common/icon";
 import Forum from "./Forum";
-import ForumType from "@/types/ForumTypes";
+import { ForumResponse } from "@/types/ForumTypes";
 import { useRouter } from "next/navigation";
 
 interface ForumTypeListProps {
-  posts: ForumType[];
+  posts: ForumResponse[];
 }
 
 export default function ForumList({ posts }: ForumTypeListProps): JSX.Element {

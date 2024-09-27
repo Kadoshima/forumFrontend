@@ -1,4 +1,4 @@
-export default interface SupportRequestType {
+export interface SupportRequestType {
   id: number;
   forum_id: number;
   post_id: number;
