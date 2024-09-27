@@ -10,13 +10,14 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import { useRouter } from "next/navigation";
+import FileUpload from "@/components/post/FileUpload";
 
 interface ForumData {
   Title: string;
   Description: string;
   Visibility: number;
   Category: string;
-  Attachment: string | null;
+  Attachment: File | null;
   Moderators: number | null;
 }
 
@@ -26,7 +27,7 @@ const CreateForumForm: React.FC = () => {
     Description: "",
     Visibility: 0,
     Category: "",
-    Attachment: null,
+    Attachment: null as File | null,
     Moderators: null,
   });
   const [error, setError] = useState<string | null>(null);
@@ -43,12 +44,8 @@ const CreateForumForm: React.FC = () => {
     }));
   };
 
-  const handleSelectChange = (e: SelectChangeEvent<number>) => {
-    const { name, value } = e.target;
-    setForumData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const handleFileChange = (file: File | null) => {
+    setForumData((prev) => ({ ...prev, Attachment: file }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -114,14 +111,15 @@ const CreateForumForm: React.FC = () => {
           margin="normal"
           required
         />
-        <TextField
+        {/* <TextField
           fullWidth
           label="Attachment URL"
           name="Attachment"
           value={forumData.Attachment}
           onChange={handleChange}
           margin="normal"
-        />
+        /> */}
+        <FileUpload onFileChange={handleFileChange} />
         {error && (
           <Typography color="error" sx={{ mt: 2 }}>
             {error}
