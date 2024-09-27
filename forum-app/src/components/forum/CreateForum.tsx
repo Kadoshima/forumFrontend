@@ -4,10 +4,6 @@ import React, { useState } from "react";
 import {
   TextField,
   Button,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
   Paper,
   Typography,
   Box,
@@ -84,14 +80,14 @@ const CreateForumForm: React.FC = () => {
   };
 
   return (
-    <Paper elevation={3} sx={{ p: 4, maxWidth: 500, mx: "auto", mt: 4 }}>
+    <Paper elevation={3} sx={{ p: 4, maxWidth: 500, mx: "auto", mt: 8 }}>
       <Typography variant="h5" component="h2" gutterBottom>
         Create New Forum
       </Typography>
       <form onSubmit={handleSubmit}>
         <TextField
           fullWidth
-          label="Title"
+          label="タイトル"
           name="Title"
           value={forumData.Title}
           onChange={handleChange}
@@ -100,7 +96,7 @@ const CreateForumForm: React.FC = () => {
         />
         <TextField
           fullWidth
-          label="Description"
+          label="説明"
           name="Description"
           value={forumData.Description}
           onChange={handleChange}
@@ -109,20 +105,9 @@ const CreateForumForm: React.FC = () => {
           rows={4}
           required
         />
-        <FormControl fullWidth margin="normal">
-          <InputLabel>Visibility</InputLabel>
-          <Select
-            name="Visibility"
-            value={forumData.Visibility}
-            onChange={handleSelectChange}
-            required>
-            <MenuItem value={0}>Public</MenuItem>
-            <MenuItem value={1}>Private</MenuItem>
-          </Select>
-        </FormControl>
         <TextField
           fullWidth
-          label="Category"
+          label="分類"
           name="Category"
           value={forumData.Category}
           onChange={handleChange}
@@ -136,16 +121,6 @@ const CreateForumForm: React.FC = () => {
           value={forumData.Attachment}
           onChange={handleChange}
           margin="normal"
-        />
-        <TextField
-          fullWidth
-          label="Moderators"
-          name="Moderators"
-          type="number"
-          value={forumData.Moderators}
-          onChange={handleChange}
-          margin="normal"
-          InputProps={{ inputProps: { min: 0 } }}
         />
         {error && (
           <Typography color="error" sx={{ mt: 2 }}>
