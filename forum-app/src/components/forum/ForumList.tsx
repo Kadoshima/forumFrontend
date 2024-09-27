@@ -15,7 +15,6 @@ export default function ForumList({ posts }: ForumTypeListProps): JSX.Element {
   const router = useRouter();
 
   const handleForumClick = (id: number) => {
-    console.log(id);
     router.push(`/forum/${id}`);
   };
 
