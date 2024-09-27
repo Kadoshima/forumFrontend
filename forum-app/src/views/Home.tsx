@@ -2,17 +2,16 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Layout from "@/app/(main)/Layout";
-import SupportRequest from "@/components/post/SupportRequest";
-import ForumList from "@/components/post/ForumList";
-import ForumType from "@/types/ForumTypes";
+import SupportRequest from "@/components/support/SupportRequest";
+import ForumList from "@/components/forum/ForumList";
+import { ForumResponse } from "@/types/ForumTypes";
 import { Snackbar, Alert, Fab, Tooltip } from "@mui/material";
 import { Add as AddIcon } from "@mui/icons-material";
 import { useSearchParams } from "next/navigation";
-import SupportRequestType from "@/types/SupportTypes";
+import { SupportRequestType } from "@/types/SupportTypes";
 
 export default function Home(): JSX.Element {
-  const [data, setData] = useState<ForumType[]>([]);
+  const [data, setData] = useState<ForumResponse[]>([]);
   const searchParams = useSearchParams();
   const [forumSuccessFlag, setForumSuccessFlag] = useState(false);
   const router = useRouter();
@@ -109,7 +108,7 @@ export default function Home(): JSX.Element {
         },
       });
 
-      const data: ForumType[] = await response.json();
+      const data: ForumResponse[] = await response.json();
       setData(data);
     };
 
@@ -131,7 +130,7 @@ export default function Home(): JSX.Element {
   };
 
   return (
-    <Layout>
+    <>
       <Snackbar
         open={forumSuccessFlag}
         autoHideDuration={6000}
@@ -169,6 +168,6 @@ export default function Home(): JSX.Element {
           <AddIcon />
         </Fab>
       </Tooltip>
-    </Layout>
+    </>
   );
 }

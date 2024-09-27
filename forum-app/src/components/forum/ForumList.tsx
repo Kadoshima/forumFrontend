@@ -1,14 +1,23 @@
+"use client";
+
 import React from "react";
 import { Button } from "@/components/common/button";
 import { ExpandIcon, FlipVerticalIcon } from "@/components/common/icon";
-import PostCard from "./Forum";
-import ForumType from "@/types/ForumTypes";
+import Forum from "./Forum";
+import { ForumResponse } from "@/types/ForumTypes";
+import { useRouter } from "next/navigation";
 
 interface ForumTypeListProps {
-  posts: ForumType[];
+  posts: ForumResponse[];
 }
 
 export default function ForumList({ posts }: ForumTypeListProps): JSX.Element {
+  const router = useRouter();
+
+  const handleForumClick = (id: number) => {
+    router.push(`/forum/${id}`);
+  };
+
   return (
     <section className="mt-8 w-full">
       <div className="flex items-center justify-between mb-4">
@@ -30,7 +39,11 @@ export default function ForumList({ posts }: ForumTypeListProps): JSX.Element {
       {Array.isArray(posts) && posts.length > 0 && (
         <div className="space-y-4">
           {posts.map((post) => (
-            <PostCard key={post.ID} post={post} />
+            <Forum
+              key={post.ID}
+              post={post}
+              onClick={() => handleForumClick(post.ID)}
+            />
           ))}
         </div>
       )}

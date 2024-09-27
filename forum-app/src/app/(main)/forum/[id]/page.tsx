@@ -1,6 +1,6 @@
 import React from "react";
-import Test from "@/views/Test";
+import Post from "@/views/Post";
 
 export default function Page() {
-  return <Test />;
+  return <Post />;
 }

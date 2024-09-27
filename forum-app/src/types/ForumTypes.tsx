@@ -1,4 +1,13 @@
-export default interface ForumType {
+export interface ForumRequest {
+  Title: string;
+  Description: string;
+  Visibility: number;
+  Category: string;
+  Attachment: string;
+  Moderators: null;
+}
+
+export interface ForumResponse {
   ID: number;
   Title: string;
   Description: string;
@@ -7,17 +16,8 @@ export default interface ForumType {
   Visibility: number;
   Category: string;
   NumPosts: number;
-  Attachments: string | null;
-  Moderators: number | null;
+  Attachments: string;
+  Moderators: null;
   CreatedAt: string;
   UpdatedAt: string;
-}
-
-export default interface ForumDataType {
-  Title: string;
-  Description: string;
-  Visibility: number;
-  Category: string;
-  Attachment: string | null;
-  Moderators: number | null;
 }
