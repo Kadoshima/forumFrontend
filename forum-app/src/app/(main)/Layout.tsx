@@ -29,7 +29,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
         <Header />
         <div className="flex">
           <main className="flex-1 p-4">{children}</main>
-          <PopularCommunities />
+          {/* <PopularCommunities /> */}
         </div>
       </div>
     </div>
