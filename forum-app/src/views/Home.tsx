@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Layout from "@/app/(main)/Layout";
-import SupportRequest from "@/components/post/SupportRequest";
-import ForumList from "@/components/post/ForumList";
+import SupportRequest from "@/components/support/SupportRequest";
+import ForumList from "@/components/forum/ForumList";
 import ForumType from "@/types/ForumTypes";
 import { Snackbar, Alert, Fab, Tooltip } from "@mui/material";
 import { Add as AddIcon } from "@mui/icons-material";

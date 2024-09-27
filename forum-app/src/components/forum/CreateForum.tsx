@@ -10,7 +10,7 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import { useRouter } from "next/navigation";
-import FileUpload from "@/components/post/FileUpload";
+import FileUpload from "@/components/imageUpload/FileUpload";
 
 interface ForumData {
   Title: string;
