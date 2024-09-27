@@ -1,20 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
+import { PostResponse } from "@/types/PostTypes";
 
-interface PostResponse {
-  ID: number;
-  ForumId: number;
-  UserId: number;
-  Content: string;
-  Status: number;
-  ParentId: number;
-  Attachment: null | string;
-  CreatedAt: string;
-  UpdatedAt: string;
-}
-
-export async function GET(request: NextRequest) {
+export async function GET(
+  request: NextRequest,
+  { params }: { params: { id: string } }
+) {
   try {
     const baseURL = process.env.NEXT_PUBLIC_ENDPOINT;
+    const { id } = params;
 
     if (!baseURL) {
       throw new Error("NEXT_PUBLIC_ENDPOINT is not defined.");
@@ -29,10 +22,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const searchParams = request.nextUrl.searchParams;
-    const forum_id = searchParams.get("forum_id");
-
-    const response = await fetch(`${baseURL}/posts/get?forum_id=${forum_id}`, {
+    const response = await fetch(`${baseURL}/posts/get?forum_id=${id}`, {
       method: "GET",
       headers: {
         Content_Type: "application/json",
