@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "@/components/common/card";
-import SupportRequestType from "@/types/SupportType";
+import SupportRequestType from "@/types/SupportTypes";
 
 interface SupportRequestProps {
   supportRequests: SupportRequestType[];

@@ -4,15 +4,15 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Layout from "@/app/(main)/Layout";
 import SupportRequest from "@/components/post/SupportRequest";
-import PostList from "@/components/post/PostList";
-import Post from "@/types/PostTypes";
+import ForumList from "@/components/post/ForumList";
+import ForumType from "@/types/ForumTypes";
 import { Snackbar, Alert, Fab, Tooltip } from "@mui/material";
 import { Add as AddIcon } from "@mui/icons-material";
 import { useSearchParams } from "next/navigation";
-import SupportRequestType from "@/types/SupportType";
+import SupportRequestType from "@/types/SupportTypes";
 
 export default function Home(): JSX.Element {
-  const [data, setData] = useState<Post[]>([]);
+  const [data, setData] = useState<ForumType[]>([]);
   const searchParams = useSearchParams();
   const [forumSuccessFlag, setForumSuccessFlag] = useState(false);
   const router = useRouter();
@@ -109,7 +109,7 @@ export default function Home(): JSX.Element {
         },
       });
 
-      const data: Post[] = await response.json();
+      const data: ForumType[] = await response.json();
       setData(data);
     };
 
@@ -152,7 +152,7 @@ export default function Home(): JSX.Element {
       </div>
 
       <div className="w-full">
-        <PostList posts={data!} />
+        <ForumList posts={data!} />
       </div>
 
       <Tooltip title="フォーラムを作成" placement="left">

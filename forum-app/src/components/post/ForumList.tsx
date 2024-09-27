@@ -1,17 +1,16 @@
 import React from "react";
-import { Card } from "@/components/common/card";
 import { Button } from "@/components/common/button";
 import { ExpandIcon, FlipVerticalIcon } from "@/components/common/icon";
-import PostCard from "./PostCard";
-import Post from "@/types/PostTypes";
+import PostCard from "./Forum";
+import ForumType from "@/types/ForumTypes";
 
-interface PostListProps {
-  posts: Post[];
+interface ForumTypeListProps {
+  posts: ForumType[];
 }
 
-export default function PostList({ posts }: PostListProps): JSX.Element {
+export default function ForumList({ posts }: ForumTypeListProps): JSX.Element {
   return (
-    <section className="mt-8">
+    <section className="mt-8 w-full">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-2">
           <Button variant="ghost" className="text-white">
@@ -28,11 +27,13 @@ export default function PostList({ posts }: PostListProps): JSX.Element {
           <FlipVerticalIcon className="w-5 h-5" />
         </Button>
       </div>
-      <div className="space-y-4">
-        {posts.map((post, index) => (
-          <PostCard key={index} post={post} />
-        ))}
-      </div>
+      {Array.isArray(posts) && posts.length > 0 && (
+        <div className="space-y-4">
+          {posts.map((post) => (
+            <PostCard key={post.ID} post={post} />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
