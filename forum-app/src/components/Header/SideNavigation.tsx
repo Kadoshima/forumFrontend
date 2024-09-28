@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ComputerIcon,
@@ -15,11 +17,18 @@ import {
   VideoIcon,
 } from "../common/icon";
 import { BookIcon, BuildingIcon, NewspaperIcon, UsersIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function SideNavigation() {
+  const router = useRouter();
+
+  const clickHomeLogo = () => {
+    router.push("/home");
+  };
+
   return (
     <aside className="w-64 p-4 bg-gray-800">
-      <div className="flex items-center mb-8">
+      <div className="flex items-center mb-8" onClick={clickHomeLogo}>
         <RssIcon className="w-8 h-8 mr-2" />
         <span className="text-xl font-bold">ChubuForum</span>
       </div>
