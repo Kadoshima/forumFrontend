@@ -9,3 +9,8 @@ export interface PostResponse {
   CreatedAt: string;
   UpdatedAt: string;
 }
+
+export interface PostRequest {
+  content: string;
+  parent_id: null | number;
+}
