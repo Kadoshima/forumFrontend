@@ -8,11 +8,11 @@ interface PostListProps {
 
 export default function PostList({ posts }: PostListProps) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 overflow-y-auto max-h-[calc(100vh-200px)]">
       {posts !== null ? (
         posts.map((post) => <PostItem key={post.ID} post={post} />)
       ) : (
-        <div>投稿がありません</div>
+        <div className="text-center text-gray-500">投稿がありません</div>
       )}
     </div>
   );
