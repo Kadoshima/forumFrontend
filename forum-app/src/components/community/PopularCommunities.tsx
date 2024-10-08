@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import { GroupIcon, EllipsisIcon } from "@/components/common/icon";
-import { Community } from "@/types/CommunityTypes";
+import { CommunityType } from "@/types/CommunityTypes";
 
 export default function PopularCommunities(): JSX.Element {
-  const communities: Community[] = [
+  const communities: CommunityType[] = [
     { name: "r/explainlikeimfive", members: "22,915,815" },
     { name: "r/IAmA", members: "22,551,272" },
     { name: "r/classicwow", members: "606,984" },

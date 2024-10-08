@@ -3,6 +3,7 @@ import { Card } from "@/components/common/card";
 import { Button } from "@/components/common/button";
 import { ThumbsUpIcon, ReplyIcon, ShareIcon } from "@/components/common/icon";
 import { ForumResponse } from "@/types/ForumTypes";
+import Image from "next/image";
 
 interface ForumProps {
   post: ForumResponse;
@@ -21,6 +22,8 @@ export default function Forum({ post, onClick }: ForumProps): JSX.Element {
               src={post.Attachments}
               alt={post.Title}
               className="w-24 h-24 object-cover rounded-md"
+              width={500}
+              height={300}
             />
           </div>
         )}

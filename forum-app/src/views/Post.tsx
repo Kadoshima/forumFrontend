@@ -40,7 +40,7 @@ export default function Post() {
 
   useEffect(() => {
     handlePostCreated();
-  }, []);
+  }, [handlePostCreated]);
 
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
