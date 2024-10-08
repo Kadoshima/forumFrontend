@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import SupportRequest from "@/components/support/SupportRequest";
 import ForumList from "@/components/forum/ForumList";
@@ -10,7 +10,7 @@ import { Add as AddIcon } from "@mui/icons-material";
 import { useSearchParams } from "next/navigation";
 import { SupportRequestType } from "@/types/SupportTypes";
 
-export default function Home(): JSX.Element {
+function HomeContent(): JSX.Element {
   const [data, setData] = useState<ForumResponse[]>([]);
   const searchParams = useSearchParams();
   const [forumSuccessFlag, setForumSuccessFlag] = useState(false);
@@ -169,5 +169,13 @@ export default function Home(): JSX.Element {
         </Fab>
       </Tooltip>
     </>
+  );
+}
+
+export default function Home(): JSX.Element {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }
