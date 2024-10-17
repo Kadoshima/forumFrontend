@@ -100,15 +100,13 @@ function HomeContent(): JSX.Element {
         return;
       }
 
-      const response = await fetch("/forum/get", {
+      const response = await fetch("/api/forum", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
       });
-
-      console.log(response.body);
 
       const data: ForumResponse[] = await response.json();
       setData(data);
