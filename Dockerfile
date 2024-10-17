@@ -6,7 +6,7 @@ RUN apk update && apk upgrade && apk add --no-cache git
 WORKDIR /app/forum-app
 
 COPY forum-app/package*.json ./
-COPY .env ./
+COPY forum-app/.env ./
 RUN npm install
 
 COPY forum-app/. .
