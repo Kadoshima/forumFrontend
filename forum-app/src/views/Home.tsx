@@ -100,7 +100,7 @@ function HomeContent(): JSX.Element {
         return;
       }
 
-      const response = await fetch("/api/forum/get", {
+      const response = await fetch("/api/forum", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
