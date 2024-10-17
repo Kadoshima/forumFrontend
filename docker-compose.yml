@@ -13,3 +13,9 @@ services:
     environment:
       - NODE_ENV=development
     command: npm run dev
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true
